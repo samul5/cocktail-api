@@ -4,7 +4,7 @@ const Cocktail = require("./get-cocktails.js");
 
 const app  = express();
 const port = 3000;
-app.use(router);
+
 
 
 // Routen
@@ -14,6 +14,7 @@ router.get("/", (req, res) => {
   res.send("API funktioniert. Nutze die Routen /cocktails oder /cocktails/:id, um Daten zu erhalten.");
 });
 
+app.use(router);
 // App starten
 app.listen(port, () => {
   console.log('App gestartet');
